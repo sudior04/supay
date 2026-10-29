@@ -1,0 +1,7 @@
+import Link from "next/link";
+import type { Language } from "@/i18n/provider";
+import type { PortalCopy } from "./types";
+
+export default function PortalFooter({ copy: t, language }: { copy: PortalCopy; language: Language }) {
+  return <footer className="site-footer"><div className="footer-main"><div className="footer-brand"><Link className="brand" href="/"><span className="brand-mark">s</span><span>supay<span className="brand-dot">.</span></span></Link><p>{t.footerLine}</p><div className="social-links"><a href="#instagram" aria-label="Instagram">ig</a><a href="#facebook" aria-label="Facebook">f</a><a href="#tiktok" aria-label="TikTok">♪</a></div></div><div className="footer-column"><strong>{t.discover}</strong><a href="#featured">{t.picks}</a><a href="#categories">{t.categoryTitle}</a><a href="#stories">Supay Studio</a></div><div className="footer-column"><strong>{t.support}</strong><a href="#help">{t.help}</a><a href="#shipping">{t.shipping}</a><a href="#returns">{t.returns}</a></div><div className="footer-newsletter"><strong>{t.newsletter}</strong><p>{t.newsletterDesc}</p><div className="newsletter-input"><input aria-label={t.email} placeholder={t.email}/><button aria-label="Subscribe">→</button></div></div></div><div className="footer-bottom"><span>{t.footer}</span><div><a href="#privacy">{t.privacy}</a><a href="#terms">{t.terms}</a><span>{language === "vi" ? "Việt Nam · VNĐ ₫" : "Vietnam · VND ₫"}</span></div></div></footer>;
+}

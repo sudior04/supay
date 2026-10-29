@@ -1,0 +1,25 @@
+/* One shared header row for customer, merchant, and administrator pages. */
+.site-header.portal-header{height:76px;min-height:76px;width:100%}
+.portal-header-row{height:100%;width:100%;padding:0 clamp(16px,3vw,48px);display:flex;flex-wrap:nowrap;align-items:center;gap:clamp(14px,1.7vw,26px)}
+.portal-header-row>.brand{flex:0 0 auto;font-size:25px;letter-spacing:-1.2px}
+.portal-header-nav{display:flex;flex:1 1 auto;align-self:stretch;align-items:stretch;flex-wrap:nowrap;min-width:0;gap:clamp(12px,1.6vw,24px);overflow-x:auto;scrollbar-width:none}
+.portal-header-nav::-webkit-scrollbar{display:none}
+.portal-header-tab{display:flex;flex:0 0 auto;align-items:center;position:relative;white-space:nowrap;padding:0 1px;text-decoration:none;color:#758479;font-size:15px;line-height:1.4}
+.portal-header-tab:hover{color:#315f49}
+.portal-header-tab.active{color:#315f49;font-weight:600}
+.portal-header-tab.active:after{content:"";position:absolute;bottom:0;left:0;right:0;height:3px;background:#527b59;border-radius:3px 3px 0 0}
+.portal-header-tab:focus-visible{outline:2px solid #527b59;outline-offset:-5px;border-radius:5px}
+.portal-header-search{display:flex;flex:0 1 230px;min-width:120px;height:40px;align-items:center;gap:9px;padding:0 11px;border:1px solid #e3eae1;border-radius:6px;background:#fafcf8;color:#8a978d}
+.portal-header-search>span{font-size:23px;line-height:1}
+.portal-header-search input{min-width:0;width:100%;font-size:13px;outline:0;border:0;background:transparent;color:#35513e}
+.portal-header-tools{display:flex;flex:0 0 auto;flex-wrap:nowrap;align-items:center;gap:14px}
+.portal-header-tools .language-switch{gap:3px}
+.portal-header-tools .language-option{min-width:36px;min-height:40px;padding:8px 6px;font-size:13px}
+.portal-header-tools .account-link{flex:0 0 auto;gap:8px;padding:0;white-space:nowrap;font-size:14px}
+.portal-header-tools .avatar{width:34px;height:34px;flex:0 0 34px;font-size:13px}
+.portal-shopping-actions{display:flex;flex:0 0 auto;align-items:center;gap:8px}
+.portal-header-tools .icon-button{height:36px;width:32px;padding:0;display:grid;place-items:center}
+@media(max-width:1350px){.portal-header-search,.portal-header-tools .role-badge{display:none}}
+@media(max-width:980px){.portal-header-row{gap:16px;padding-inline:20px}.portal-header-nav{gap:19px}.portal-header-tab{font-size:14px}.portal-header-tools{gap:10px}.portal-header-tools .portal-favorites{display:none}}
+@media(max-width:760px){.site-header.portal-header{height:68px;min-height:68px}.portal-header-row{padding-inline:14px;gap:14px}.portal-header-row>.brand{font-size:22px}.portal-header-tab{font-size:14px}.portal-header-nav{gap:18px}.portal-account-label{display:none}.portal-header-tools{gap:8px}}
+@media(max-width:560px){.portal-brand-name,.portal-shopping-actions{display:none}.portal-header-row{padding-inline:12px;gap:12px}.portal-header-tools{gap:6px}.portal-header-tools .language-option{min-width:32px;padding-inline:4px}.portal-header-tools .avatar{width:32px;height:32px;flex-basis:32px}}
